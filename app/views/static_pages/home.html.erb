@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+
+  <body>
+    <h1>Bienvenu sur mon super site de gossip!</h1>
+    <br>
+
+    <p>
+    <% @list_goss.each do |list| %>
+      <strong><%= link_to "Auteur :", gossips_show_path(list.id) %></strong> <%= list.user.first_name %> <%= list.user.last_name %><br>
+      
+      <strong>Titre :</strong> <%= list.title %><br>
+      <br>
+    <% end %>
+    
+    
+    </p>
+  <body>
+</html>
